@@ -42,7 +42,7 @@
         <p class="parpad">disclaimer: not functional yet.</p>
 
       </div>
-      <form name="pag1" class="pag1" onsubmit="return validateForm1()">
+      <form name="pag1" class="pag1" onsubmit="return validateForm1(e)">
 
         <label for="fname">Name: 
         </label><br>
@@ -132,6 +132,7 @@
         else {
           console.log(passWord);
           console.log(passWordCon);
+          e.preventDefault();
         }
       
       }
