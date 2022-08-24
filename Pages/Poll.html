@@ -50,7 +50,7 @@
         <br>
 
         <label for="CPF">CPF:</label> <br>
-        <input type="number" id="CPF" name="CPF" minlength="11" maxlength="11" required>
+        <input type="text" id="CPF" name="CPF" minlength="11" maxlength="11" required>
         <br>
 
         <label for="Senha">Senha:</label> <br>
@@ -62,7 +62,7 @@
         <input type="submit" value="Submit" style="margin-bottom: 10px;">
       </form>
 
-      </form>
+      <form class="pag2">
         Em que estado você trabalha?
         <br>
         <input type="radio" id="RS">
@@ -113,8 +113,8 @@
           console.log(nameVar);
         }
 
-        let varCPF = document.forms["pag1"]["CPF"].innerHTML;
-        if (CPF==11) {
+        let varCPF = document.forms["pag1"]["CPF"].value;
+        if (varCPF.length==11) {
           return true;
           console.log(CPF);
         }
