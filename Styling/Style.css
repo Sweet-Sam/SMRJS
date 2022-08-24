@@ -905,3 +905,19 @@ th {
 .show {
     display: block;
 }
+
+.pag2 {
+    display: none;
+}
+
+.pag3{
+    display: none;
+}
+
+input:invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}

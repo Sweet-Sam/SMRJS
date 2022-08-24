@@ -38,66 +38,40 @@
     <div class="columntext">
 
       <div style="width:70%;">
-        <h3 style="padding: 10px;">This isn't a question of what you want to see less of, I write about what I want after all, but what do you want to see me 
-          writing more about?
-        </h3>
+        
         <p class="parpad">disclaimer: not functional yet.</p>
-        <div class="technically-an-animation"></div>
+
       </div>
-      <form target="./received.html">
+      <form name="pag1">
 
-        <label for="name">Name:
+        //name
+        <label for="fname">Name: 
         </label><br>
-        <input type="text" name="name" id="name">
+        <input type="text" id="fname" required>
         <br>
 
-        <label for="email_id">Email for receiving a reply:
-        </label><br>
-        <input type="text" name="email_id" id="email_id">
+        <label for="CPF">CPF:</label>
+        <input type="number" id="CPF" required>
         <br>
 
-        <label for="thoughts">Your toughts go here: <br>
-        </label>
-        <textarea rows="5" cols="50" name="thoughts"
-        id="thoughts"></textarea>
-        <br><br>
-
-        <h4 style="padding: 10px;">Now this is unrelated, but I'm curious.</h4>
+        <label for="Senha">Senha:</label>
+        <input type="password" id="Senha" required>
         <br>
+        <label for="SenhaCon">Confirmar Senha:</label>
+        <input type="password" id="SenhaCon" required>
+      </form>
 
+      </form>
         What OS do you use primarily?
         <br>
-        <input type="radio" id="LN">
-        <label for="LN">Linux</label> <br>
-        <input type="radio" id="MC">
-        <label for="MC">MacOS</label> <br>
-        <input type="radio" name="POS" id="WN10">
-        <label for="WN10">Windows 10</label> <br>
-        <input type="radio" id="WN11">
-        <label for="WN11">Windows 11</label> <br>
+        <input type="radio" id="RS">
+        <label for="RS">RS</label> <br>
+        <input type="radio" id="SC">
+        <label for="SC">SC</label> <br>
+        <input type="radio" id="PR">
+        <label for="PR">PR</label>
         <br> <br>
 
-        Which of these Operating Systems have you used? (actual use, looking at it once or twice doesn't count.) <br>
-        <input type="checkbox" name="UOS" id="Linux">
-        <label for="Linux">Linux</label> <br>
-        <input type="checkbox" name="UOS" id="MacOS">
-        <label for="MacOS">MacOS</label> <br>
-        <input type="checkbox" name="UOS" id="Windows10">
-        <label for="Windows10">Windows 10</label> <br>
-        <input type="checkbox" name="UOS" id="Windows11">
-        <label for="Windows11">Windows 11</label> <br>
-        <br><br>
-
-        Also, I need to f̶i̶l̶l̶ ̶o̶u̶t̶ ̶s̶p̶a̶c̶e̶ ̶w̶i̶t̶h̶ ̶d̶i̶f̶f̶e̶r̶e̶n̶t̶ ̶i̶n̶p̶u̶t̶ ̶t̶y̶p̶e̶s̶   make some money, so please, give me your phone number for me to sell it to scammers. <br>
-        <label for="pnumber">Phone number</label> <br>
-        <input type="tel" name="pnumber" id="pnumber"> <br>
-        How many times a day are you ok with receiving scam calls?
-        <label for="tds">Total times</label> <br>
-        <input type="number" name="tds" id="tds">
-        <br>
-        for legal reasons, the above was a joke. I really just had to fill out space.
-        <br>
-        <br>
 
         <input type="submit" value="Submit" style="margin-bottom: 10px;">
       </form>
@@ -125,6 +99,14 @@
         }
       }
     }
+
+    function validateNameForm() {
+        let x = document.forms["pag1"]["fname"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
   </script>
 
   <footer>
