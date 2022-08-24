@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam's Mad Ramblings</title>
+  <link rel=STYLESHEET type="text/css" href="../Styling/Style.css">
+  <link rel="icon" href="../IMG/logo.png">
+</head>
+
+<body class="Main">
+
+  <header>
+    <img src="../IMG/logo.png" alt="BlackCatYawning" height="75" width="75">
+    <p>Sam's Mad Ramblings</p>
+  </header>
+
+  <nav>
+    <div class="navbar">
+      <div class="dropmenu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+            Menu
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="./Index.html">Home</a></li>
+            <a href="./Rambles.html">Rambles</a>
+            <a href="./Pics.html">Pics</a>
+            <a href="./Animation.html">Animation</a>
+            <a class="active" href="./About.html">About</a>
+            <a href="./Poll.html">Poll</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="columnabout">
+    <div class="columntext">
+      <div class="wrap">
+
+        <div style="width: 50%;">
+          <br>
+          <h1>Whomst Am I?</h1>
+          <div class="technically-an-animation"></div>
+        </div>
+        <br>
+
+        <figure>
+          <img src="../IMG/CaimanAlert.jpeg" alt="Funny little guy" class="left">
+        </figure>
+
+        <p class="par">Heya, the name's Sam. Long story short I just got too much free time and figured I'd shout my
+          opinions out into the void
+          that is the internet, like any good user of it. Like any other good user of the internet I also know that no
+          one really cares, but I figure
+          I may as well archive my thoughts somewhere and I know for a fact I can't keep a diary or journal.
+        </p>
+        <br>
+        <p class="par">The cat which I will probably post a whole lot of (the funny little guy in the picture in this
+          page) is Caiman, he's still young, 'round
+          4 months as of writing this, and he may be an annoying, unbearable asshole sometimes but I still love him at
+          the end of the day, even if I really wish
+          I could sleep through the morning without getting either clawed, chewed or having my ears mewoed out.
+        </p>
+        <br>
+        <p class="par">
+          More about me though. I like writing, playing games, procrastinating, and I spend the majority of my free time
+          with music in my ears. I'm still not published
+          , but someday, maybe in a few weeks, I'll have a book that's at least halfway decent out there so I can plug
+          it and hopefully make some money, but it's not
+          like I really expect to be able to make any sort of living out of writing unless I get really lucky.
+        </p>
+        <p class="par">Other than that, I don't know much else to say that I'm not going to go over in my rambles, which
+          outside of the Ramble of The Week, will be posted
+          pretty much whenever I feel like posting one. Don't ask me for a schedule on the weekly one either, I probably
+          won't follow it anyways.
+        </p>
+        <br>
+        <p class="par">One last thing: I wanted to get a picture of Caiman yawning, with a wide open mouth, to make it
+          look like he was shouting, for the logo, but until then we'll make do with the current one.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <ul class="ul">
+      <li class="li"><a style="font-size: 12px;" href="https://twitter.com/SamsMadRambles">Twitter</a></li>
+      <li class="li"><a style="font-size: 12px;" href="https://www.amazon.com/Kindle-Store/b?ie=UTF8&node=133140011">My
+          Books (soon™️)</a></li>
+    </ul>
+  </footer>
+</body>
+
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+</html>

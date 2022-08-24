@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Mad Ramblings</title>
+    <link rel=STYLESHEET type="text/css" href="../Styling/Style.css">
+    <link rel="icon" href="../IMG/logo.png">
+</head>
+
+<body class="Main">
+
+    <header>
+        <img src="../IMG/logo.png" alt="BlackCatYawning" height="75" width="75">
+        <p>Sam's Mad Ramblings</p>
+    </header>
+
+    <nav>
+        <div class="navbar">
+            <div class="dropmenu">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        Menu
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="./Index.html">Home</a></li>
+                        <a href="./Rambles.html">Rambles</a>
+                        <a href="./Pics.html">Pics</a>
+                        <a href="./Animation.html">Animation</a>
+                        <a class="active" href="./About.html">About</a>
+                        <a href="./Poll.html">Poll</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="column">
+
+        <div class="technically-an-animation"></div>
+
+        <div class="animation">
+            <div class="almost-high-effort-animation ahea1"></div>
+            <div class="almost-high-effort-animation ahea2"></div>
+            <div class="almost-high-effort-animation ahea3"></div>
+            <div class="almost-high-effort-animation ahea4"></div>
+            <div class="almost-high-effort-animation ahea5"></div>
+            <div class="almost-high-effort-animation ahea6"></div>
+            <div class="almost-high-effort-animation ahea7"></div>
+            <div class="almost-high-effort-animation ahea8"></div>
+            <div class="almost-high-effort-animation ahea9"></div>
+            <div class="almost-high-effort-animation ahea10"></div>
+        </div>
+
+        <div class="gridthing">
+            <div style="background-color: black; grid-column: 1; grid-row: 1;"></div>
+            <div style="background-color: black; grid-column: 3; grid-row: 1;"></div>
+            <div style="background-color: black; grid-column: 2; grid-row: 2;"></div>
+            <div style="background-color: black; grid-column: 1; grid-row: 3;"></div>
+            <div style="background-color: black; grid-column: 3; grid-row: 3;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <footer>
+        <ul class="ul">
+            <li class="li"><a style="font-size: 12px;" href="https://twitter.com/SamsMadRambles">Twitter</a></li>
+            <li class="li"><a style="font-size: 12px;"
+                    href="https://www.amazon.com/Kindle-Store/b?ie=UTF8&node=133140011">My
+                    Books (soon™️)</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

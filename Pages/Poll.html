@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam's Mad Ramblings</title>
+  <link rel=STYLESHEET type="text/css" href="../Styling/Style.css">
+  <link rel="icon" href="../IMG/logo.png">
+</head>
+<body class="Main">
+
+  <header>
+    <img src="../IMG/logo.png" alt="BlackCatYawning" height="75" width="75">
+    <p>Sam's Mad Ramblings</p>
+</header>
+
+  <nav>
+    <div class="navbar">
+      <div class="dropmenu">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+            Menu
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="./Index.html">Home</a></li>
+            <a href="./Rambles.html">Rambles</a>
+            <a href="./Pics.html">Pics</a>
+            <a href="./Animation.html">Animation</a>
+            <a class="active" href="./About.html">About</a>
+            <a href="./Poll.html">Poll</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="column">
+    <div class="columntext">
+
+      <div style="width:70%;">
+        <h3 style="padding: 10px;">This isn't a question of what you want to see less of, I write about what I want after all, but what do you want to see me 
+          writing more about?
+        </h3>
+        <p class="parpad">disclaimer: not functional yet.</p>
+        <div class="technically-an-animation"></div>
+      </div>
+      <form target="./received.html">
+
+        <label for="name">Name:
+        </label><br>
+        <input type="text" name="name" id="name">
+        <br>
+
+        <label for="email_id">Email for receiving a reply:
+        </label><br>
+        <input type="text" name="email_id" id="email_id">
+        <br>
+
+        <label for="thoughts">Your toughts go here: <br>
+        </label>
+        <textarea rows="5" cols="50" name="thoughts"
+        id="thoughts"></textarea>
+        <br><br>
+
+        <h4 style="padding: 10px;">Now this is unrelated, but I'm curious.</h4>
+        <br>
+
+        What OS do you use primarily?
+        <br>
+        <input type="radio" id="LN">
+        <label for="LN">Linux</label> <br>
+        <input type="radio" id="MC">
+        <label for="MC">MacOS</label> <br>
+        <input type="radio" name="POS" id="WN10">
+        <label for="WN10">Windows 10</label> <br>
+        <input type="radio" id="WN11">
+        <label for="WN11">Windows 11</label> <br>
+        <br> <br>
+
+        Which of these Operating Systems have you used? (actual use, looking at it once or twice doesn't count.) <br>
+        <input type="checkbox" name="UOS" id="Linux">
+        <label for="Linux">Linux</label> <br>
+        <input type="checkbox" name="UOS" id="MacOS">
+        <label for="MacOS">MacOS</label> <br>
+        <input type="checkbox" name="UOS" id="Windows10">
+        <label for="Windows10">Windows 10</label> <br>
+        <input type="checkbox" name="UOS" id="Windows11">
+        <label for="Windows11">Windows 11</label> <br>
+        <br><br>
+
+        Also, I need to f̶i̶l̶l̶ ̶o̶u̶t̶ ̶s̶p̶a̶c̶e̶ ̶w̶i̶t̶h̶ ̶d̶i̶f̶f̶e̶r̶e̶n̶t̶ ̶i̶n̶p̶u̶t̶ ̶t̶y̶p̶e̶s̶   make some money, so please, give me your phone number for me to sell it to scammers. <br>
+        <label for="pnumber">Phone number</label> <br>
+        <input type="tel" name="pnumber" id="pnumber"> <br>
+        How many times a day are you ok with receiving scam calls?
+        <label for="tds">Total times</label> <br>
+        <input type="number" name="tds" id="tds">
+        <br>
+        for legal reasons, the above was a joke. I really just had to fill out space.
+        <br>
+        <br>
+
+        <input type="submit" value="Submit" style="margin-bottom: 10px;">
+      </form>
+    </div>
+    
+  </div>
+
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+  <footer>
+    <ul class="ul">
+      <li class="li"><a style="font-size: 12px;" href="https://twitter.com/SamsMadRambles">Twitter</a></li>
+      <li class="li"><a style="font-size: 12px;" href="https://www.amazon.com/Kindle-Store/b?ie=UTF8&node=133140011">My Books (soon™️)</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
