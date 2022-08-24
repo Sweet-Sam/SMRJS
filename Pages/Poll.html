@@ -42,27 +42,26 @@
         <p class="parpad">disclaimer: not functional yet.</p>
 
       </div>
-      <form name="pag1">
+      <form name="pag1" onsubmit="return validateForm1()" method="post">
 
-        //name
         <label for="fname">Name: 
         </label><br>
-        <input type="text" id="fname" required>
+        <input type="text" name="fname" id="fname" required>
         <br>
 
-        <label for="CPF">CPF:</label>
-        <input type="number" id="CPF" required>
+        <label for="CPF">CPF:</label> <br>
+        <input type="number" id="CPF" name="CPF" minlength="11" maxlength="11" required>
         <br>
 
-        <label for="Senha">Senha:</label>
-        <input type="password" id="Senha" required>
+        <label for="Senha">Senha:</label> <br>
+        <input type="password" id="Senha" name="Senha" required>
         <br>
-        <label for="SenhaCon">Confirmar Senha:</label>
-        <input type="password" id="SenhaCon" required>
+        <label for="SenhaCon">Confirmar Senha:</label> <br>
+        <input type="password" id="SenhaCon" name="SenhaCon" required>
       </form>
 
       </form>
-        What OS do you use primarily?
+        Em que estado você trabalha?
         <br>
         <input type="radio" id="RS">
         <label for="RS">RS</label> <br>
@@ -100,12 +99,39 @@
       }
     }
 
-    function validateNameForm() {
-        let x = document.forms["pag1"]["fname"].value;
-        if (x == "") {
+    function validateForm1() {
+        let nameVar = document.forms["pag1"]["fname"].value;
+        let nameVarBool;
+        if (nameVar == "") {
           alert("Name must be filled out");
           return false;
         }
+        else {
+          nameVarBool = true;
+          console.log(nameVar);
+        }
+
+        let varCPF = document.forms["pag1"]["CPF"].innerHTML;
+        if (CPF==11) {
+          return true;
+          console.log(CPF);
+        }
+        else {
+          alert("CPF must be 11 digits");
+          return false;
+        }
+
+        let passWord = document.forms["pag1"]["Senha"].value;
+        let passWordCon = document.forms["pag1"]["SenhaCon"].value;
+        if (passWord!=passWordCon) {
+          return false;
+          alert("Passwords must match.")
+        }
+        else {
+          console.log(passWord);
+          console.log(passWordCon);
+        }
+      
       }
   </script>
 
