@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
   <link rel=STYLESHEET type="text/css" href="../Styling/Style.css">
   <link rel="icon" href="../IMG/logo.png">
 </head>
+
 <body class="Main">
 
   <header>
     <img src="../IMG/logo.png" alt="BlackCatYawning" height="75" width="75">
     <p>Sam's Mad Ramblings</p>
-</header>
+  </header>
 
   <nav>
     <div class="navbar">
@@ -23,7 +25,7 @@
             Menu
           </button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="./Index.html">Home</a></li>
+            <a href="./Index.html">Home</a>
             <a href="./Rambles.html">Rambles</a>
             <a href="./Pics.html">Pics</a>
             <a href="./Animation.html">Animation</a>
@@ -34,117 +36,101 @@
       </div>
     </div>
   </nav>
+
   <div class="column">
     <div class="columntext">
 
       <div style="width:70%;">
-        
+
         <p class="parpad">disclaimer: not functional yet.</p>
 
       </div>
-      <form name="pag1" class="pag1">
 
-        <label for="fname">Name: 
+      <form id="pag1" class="pag1">
+        <!--Form 1-->
+
+        <label for="vName">Name:
+          <!--Name input-->
         </label><br>
-        <input type="text" name="fname" id="fname" required>
+        <input type="text" name="vName" id="vName">
+        <p class="p" id="vNameErM">looks fine for now.</p>
         <br>
 
-        <label for="CPF">CPF:</label> <br>
-        <input type="text" id="CPF" name="CPF" minlength="11" maxlength="11" required>
+        <label for="vCPF">CPF:</label> <br>
+        <!--cpf input-->
+        <input type="number" id="vCPF" name="vCPF">
+        <p class="p" id="vCPFErM">looks fine for now.</p>
         <br>
 
-        <label for="Senha">Senha:</label> <br>
-        <input type="password" id="Senha" name="Senha" required>
+        <label for="Password">Password:</label> <br>
+        <!--Password input-->
+        <input type="password" id="Password" name="Password">
         <br>
-        <label for="SenhaCon">Confirmar Senha:</label> <br>
-        <input type="password" id="SenhaCon" name="SenhaCon" required>
+        <label for="cPassword">Confirma Password:</label> <br>
+        <!--confirm Password input-->
+        <input type="password" id="cPassword" name="cPassword">
+        <p class="p" id="vPasswordErM">looks fine for now.</p>
         <br>
-        <input type="submit" value="Submit" id="sub" style="margin-bottom: 10px;">
-      </form>
 
-      <form class="pag2">
-        Em que estado você trabalha?
-        <br>
-        <input type="radio" id="RS">
-        <label for="RS">RS</label> <br>
-        <input type="radio" id="SC">
-        <label for="SC">SC</label> <br>
-        <input type="radio" id="PR">
-        <label for="PR">PR</label>
+        <input type="button" name="advance" value="Advance" id="adv1">
+        <!--advance button 1-->
         <br> <br>
-
-
-        <input type="submit" value="Submit" style="margin-bottom: 10px;">
       </form>
+
+      <form id="pag2" class="pag2">
+
+        <label for="vPro">What is your profession?</label> <br>
+        <input type="text" name="vPro" id="vPro"> <br>
+        <p class="p" id="vProErM">looks fine for now.</p>
+
+        In what state do you work?
+        <br>
+        <input type="radio" name="state" id="RS">
+        <label for="RS">RS</label> <br>
+        <input type="radio" name="state" id="SC">
+        <label for="SC">SC</label> <br>
+        <input type="radio" name="state" id="PR">
+        <label for="PR">PR</label>
+        <p class="p" id="vStateErM">looks fine for now.</p>
+        <br>
+
+        <label for="vYears">How many years of experience do you have?:</label>
+        <input type="number" id="vYears" name="vYears">
+        <p class="p" id="vYearsErM">looks fine for now.</p>
+
+
+        <input type="button" name="advance" value="Advance" id="adv2">
+      </form>
+
+      <form id="pag3" class="pag3">
+        <div id="logging">placeholder</div>
+
+        <br>
+
+        <p style="font-size:large">Are your credentials correct?</p>
+        <label for="checkY">Yes</label>
+        <input type="radio" name="check" id="checkY">
+        <br>
+        <label for="checkN">No</label>
+        <input type="radio" name="check" id="checkN">
+
+        
+
+      </form>
+
     </div>
-    
+
   </div>
 
-  <script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function (event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-
-    document.querySelector("#sub").onclick = validateForm1;
-
-    function validateForm1() {
-        let nameVar = document.forms["pag1"]["fname"].value;
-        let nameVarBool;
-        if (nameVar == "") {
-          alert("Name must be filled out");
-          return false;
-        }
-        else {
-          nameVarBool = true;
-          console.log(nameVar);
-        }
-
-        let varCPF = document.forms["pag1"]["CPF"].value;
-        if (varCPF.length==11) {
-          return true;
-          console.log(CPF);
-        }
-        else {
-          alert("CPF must be 11 digits");
-          return false;
-        }
-
-        let passWord = document.forms["pag1"]["Senha"].value;
-        let passWordCon = document.forms["pag1"]["SenhaCon"].value;
-        if (passWord!=passWordCon) {
-          return false;
-          alert("Passwords must match.")
-        }
-        else {
-          console.log(passWord);
-          console.log(passWordCon);
-          e.preventDefault();
-        }
-      
-      }
-  </script>
+  <script src="../JS/gears.js"> </script>
 
   <footer>
     <ul class="ul">
       <li class="li"><a style="font-size: 12px;" href="https://twitter.com/SamsMadRambles">Twitter</a></li>
-      <li class="li"><a style="font-size: 12px;" href="https://www.amazon.com/Kindle-Store/b?ie=UTF8&node=133140011">My Books (soon™️)</a></li>
+      <li class="li"><a style="font-size: 12px;" href="https://www.amazon.com/Kindle-Store/b?ie=UTF8&node=133140011">My
+          Books (soon™️)</a></li>
     </ul>
   </footer>
 </body>
+
 </html>

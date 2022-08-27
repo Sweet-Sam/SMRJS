@@ -910,14 +910,27 @@ th {
     display: none;
 }
 
-.pag3{
+.pag3 {
     display: none;
 }
 
-input:invalid {
-    border: 2px dashed red;
+input {
+    padding: 3px;
+    border: 2px;
 }
 
-input:valid {
-    border: 2px solid black;
+label {
+    font-size: large;
+}
+
+#adv1 {
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#adv2 {
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
